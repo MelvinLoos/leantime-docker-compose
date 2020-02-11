@@ -4,6 +4,8 @@ services:
     image: leantime/leantime:latest
     ports:
       - 80:80
+    depends_on:
+    - db
     environment:
       - DB_HOST=db
       - MYSQL_USER=${DB_USER}
